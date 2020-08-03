@@ -1,0 +1,27 @@
+.example-card {
+    max-width: 40%;
+    margin-right: 10%;
+}
+
+.asset-card {
+    display: flex;
+    align-items: stretch;
+    text-align: center;
+    justify-content: center;
+}
+
+mat-card-img {
+    object-fit: cover;
+    /*this makes the image in src fit to the size specified below*/
+    max-height: 60%;
+}
+
+.assetImg {
+    height: 100%;
+    width: 50%;
+}
+
+.imgDiv {
+    height: 100%;
+    width: 100%;
+}

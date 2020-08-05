@@ -4,13 +4,24 @@ import { AllAssetComponent } from './all-asset/all-asset.component';
 import { AssetComponent } from './asset/asset.component';
 import { AssetInfoComponent } from './asset-info/asset-info.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CreateAssetComponent } from './create-asset/create-asset.component';
+import { UpdateAssetComponent } from './update-asset/update-asset.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'home', component: AssetComponent},
-  {path: 'home/:title', component: AssetInfoComponent},
-  {path: '**', component: PageNotFoundComponent}
+  { path: '', redirectTo: '/asset', pathMatch: 'full' },
+  { path: 'asset', component: AssetComponent },
+  { path: 'home/:id/', component: AssetInfoComponent },
+  {
+    path: 'asset/:id/:title',
+    component: AssetInfoComponent,
+    children: [
+      { path: 'update', component: UpdateAssetComponent }
+    ]
+  },
+  { path: 'asset/create', component: CreateAssetComponent },
+  { path: 'asset/update', component: UpdateAssetComponent },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
@@ -18,4 +29,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [ AllAssetComponent];
+export const routingComponents = [AllAssetComponent];

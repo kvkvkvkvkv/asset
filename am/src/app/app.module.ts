@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,6 +9,14 @@ import { MaterialModule } from './material/material.module';
 import { AssetInfoComponent } from './asset-info/asset-info.component';
 import { NavComponent } from './nav/nav.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AssetService } from './asset.service';
+import { HeaderComponent } from './header/header.component';
+import { CreateAssetComponent } from './create-asset/create-asset.component';
+import { UpdateAssetComponent } from './update-asset/update-asset.component';
+import { FormsModule } from '@angular/forms';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,15 +25,19 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AssetInfoComponent,
     NavComponent,
     routingComponents,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HeaderComponent,
+    CreateAssetComponent,
+    UpdateAssetComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AssetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

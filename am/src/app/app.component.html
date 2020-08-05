@@ -1,12 +1,13 @@
 <mat-grid-list [cols]="6" rowHeight="16.5%">
   <mat-grid-tile [colspan]="6" [rowspan]="1">
-    2
+    <app-header></app-header>
   </mat-grid-tile>
   <mat-grid-tile [colspan]="1" [rowspan]="4">
     <app-nav></app-nav>
   </mat-grid-tile>
   <mat-grid-tile [colspan]="5" [rowspan]="4">
     <div class="asset">
+      <!-- <app-create-asset></app-create-asset> -->
       <router-outlet></router-outlet>
     </div>
   </mat-grid-tile>

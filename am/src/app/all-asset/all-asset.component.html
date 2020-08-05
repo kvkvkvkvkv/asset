@@ -1,12 +1,12 @@
 <div class="asset-card" *ngIf="!toggleInfo">
-    <mat-card class="example-card" *ngFor="let asset of assetData">
+    <mat-card class="example-card" *ngFor="let asset of assetDatas">
         <mat-card-header>
-            <mat-card-title>{{asset.title}}</mat-card-title>
+            <mat-card-title>{{asset.title | titlecase}}</mat-card-title>
         </mat-card-header>
         <img mat-card-image [src]="asset.img" alt="Photo of a Shiba Inu">
         <mat-card-actions>
-            <button mat-raised-button (click)="getAssetById(asset)">Know More</button>
             <button mat-raised-button (click)="assetDetail(asset)">Know More</button>
+            <button mat-raised-button (click)="assetDetail1(asset)">Know More</button>
         </mat-card-actions>
     </mat-card>
 </div>

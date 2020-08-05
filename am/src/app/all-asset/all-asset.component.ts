@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output , EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { AssetService, Asset } from '../asset.service';
 
 @Component({
   selector: 'app-all-asset',
@@ -12,10 +13,12 @@ export class AllAssetComponent implements OnInit {
   @Input() assetData : any;
   toggleInfo : boolean = false;
   assetInformation : any;
+  assetDatas : Asset[];
  
-  constructor(private router: Router) { }
+  constructor(private router: Router, private assetService : AssetService) { }
 
   ngOnInit() {
+    this.assetDatas = this.assetService.getAssets();
   }
 
   home() {
@@ -28,7 +31,10 @@ export class AllAssetComponent implements OnInit {
   }
 
   assetDetail(asset) {
-    this.router.navigate(['/home', asset.title]);
+    this.router.navigate(['/home', asset.id]);
   }
 
+  assetDetail1(asset) {
+    this.router.navigate(['/asset', asset.id, asset.title]);
+  }
 }

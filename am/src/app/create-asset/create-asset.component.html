@@ -1,0 +1,28 @@
+<div class="example-container">
+    <form #create="ngForm" (ngSubmit)="onSubmit(create.value)">
+        <mat-form-field appearance="fill">
+            <mat-label>ID</mat-label>
+            <input matInput name="id" [(ngModel)]="id">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Title</mat-label>
+            <input matInput name="title" [(ngModel)]="title">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>No of Units</mat-label>
+            <input matInput name="unit" (ngModel)="unit">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea matInput name="desc" (ngModel)="desc"></textarea>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button>Create Asset</button>
+    </form>
+</div>
+
+<p>First name value: {{ title}}</p>
+<p>Form value: {{ create.value | json }}</p>

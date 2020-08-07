@@ -10,24 +10,12 @@ import { AssetService, Asset } from '../asset.service';
 export class AllAssetComponent implements OnInit {
 
   title : string;
-  @Input() assetData : any;
-  toggleInfo : boolean = false;
-  assetInformation : any;
   assetDatas : Asset[];
  
   constructor(private router: Router, private assetService : AssetService) { }
 
   ngOnInit() {
     this.assetDatas = this.assetService.getAssets();
-  }
-
-  home() {
-    alert("home")
-  }
-
-  getAssetById(asset:any) {
-    this.toggleInfo = true;
-    this.assetInformation = asset;
   }
 
   assetDetail(asset) {

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AssetComponent } from './asset/asset.component';
+// import { AssetComponent } from './asset/asset.component';
 import { AllAssetComponent } from './all-asset/all-asset.component';
 import { MaterialModule } from './material/material.module';
 import { AssetInfoComponent } from './asset-info/asset-info.component';
@@ -15,13 +15,15 @@ import { CreateAssetComponent } from './create-asset/create-asset.component';
 import { UpdateAssetComponent } from './update-asset/update-asset.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AssetComponent,
+    // AssetComponent,
     AllAssetComponent,
     AssetInfoComponent,
     NavComponent,
@@ -30,7 +32,9 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     CreateAssetComponent,
     UpdateAssetComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,13 @@
 <cdk-virtual-scroll-viewport itemSize="100" class="viewport">
-    <mat-card class="example-card" *cdkVirtualFor="let asset of assetDatas">
-        <mat-card-header>
-            <mat-card-title>{{asset.title | titlecase}}</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image [src]="asset.img" alt="Photo of a Shiba Inu">
-        <mat-card-actions>
-            <button mat-raised-button (click)="assetDetail1(asset)">Know More</button>
-        </mat-card-actions>
-    </mat-card>
+    <div fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="15px">
+        <mat-card class="example-card" *cdkVirtualFor="let asset of assetDatas">
+            <mat-card-header>
+                <mat-card-title>{{asset.title | titlecase}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image [src]="asset.img" alt="Photo of a Shiba Inu">
+            <mat-card-actions>
+                <button mat-raised-button (click)="assetDetail1(asset)">Know More</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
 </cdk-virtual-scroll-viewport>
-  

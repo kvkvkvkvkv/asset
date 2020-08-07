@@ -46,4 +46,6 @@ export class AssetInfoComponent implements OnInit {
   updateAsset() {
     this.routing.navigate(['update'],{relativeTo:this.router});
   }
+
+  
 }

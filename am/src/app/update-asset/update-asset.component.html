@@ -1,0 +1,25 @@
+<div class="example-container">
+    <form #update="ngForm" (ngSubmit)="onSubmit(update.value)">
+        <mat-list role="list">
+            <mat-list-item role="listitem">
+                <mat-icon matListIcon>{{data.title}}</mat-icon>
+                <p>{{data.title | titlecase}}
+                <p>
+            </mat-list-item>
+        </mat-list>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>No of Units</mat-label>
+            <input matInput name="unit" [(ngModel)]="data.number" type="number">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea matInput name="desc" [(ngModel)]="data.desc"></textarea>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button (click)="goBack()">Update Asset</button>
+    </form>
+    <br>
+    <button mat-raised-button (click)="goBack()">Go Back</button>
+</div>

@@ -46,5 +46,7 @@ export class AssetService {
     return this.obj;
   }
 
-
+  updateList(updateData) {
+    this.data.map(ele => ele.id == updateData.id?updateData:ele);
+  }
 }

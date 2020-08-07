@@ -6,19 +6,16 @@ import { AssetInfoComponent } from './asset-info/asset-info.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CreateAssetComponent } from './create-asset/create-asset.component';
 import { UpdateAssetComponent } from './update-asset/update-asset.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/asset', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'asset', component: AssetComponent },
   { path: 'home/:id/', component: AssetInfoComponent },
-  {
-    path: 'asset/:id/:title',
-    component: AssetInfoComponent,
-    children: [
-      { path: 'update', component: UpdateAssetComponent }
-    ]
-  },
+  { path: 'asset/:id/:title', component: AssetInfoComponent },
+  { path: 'asset/:id/:title/update', component: UpdateAssetComponent },
   { path: 'asset/create', component: CreateAssetComponent },
   { path: 'asset/update', component: UpdateAssetComponent },
   { path: '**', component: PageNotFoundComponent }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatGridListModule, MatCardModule, MatListModule, MatSelectModule, MatSidenavModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule} from '@angular/material';
+import { MatButtonModule, MatGridListModule, MatCardModule, MatListModule, MatSelectModule, MatSidenavModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatTabsModule} from '@angular/material';
+import { ScrollingModule, ScrollDispatchModule } from '@angular/cdk/scrolling';
 
 const MaterialComponents = [
   MatCardModule,
@@ -11,7 +12,10 @@ const MaterialComponents = [
   MatIconModule,
   MatToolbarModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatTabsModule,
+  ScrollingModule,
+  ScrollDispatchModule
 ];
 
 @NgModule({

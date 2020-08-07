@@ -1,0 +1,5 @@
+<mat-tab-group mat-align-tabs="start">
+    <mat-tab [label]="ele.title | titlecase" *ngFor="let ele of data">
+        <img mat-card-image [src]="ele.img" alt="Photo of a Shiba Inu">
+    </mat-tab>
+</mat-tab-group>

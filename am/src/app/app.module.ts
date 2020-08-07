@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { CreateAssetComponent } from './create-asset/create-asset.component';
 import { UpdateAssetComponent } from './update-asset/update-asset.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     PageNotFoundComponent,
     HeaderComponent,
     CreateAssetComponent,
-    UpdateAssetComponent
+    UpdateAssetComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

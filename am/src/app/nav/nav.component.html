@@ -1,6 +1,10 @@
 <mat-nav-list role="list">
-    <a mat-list-item routerLink="/asset">
+    <a mat-list-item routerLink="/home">
         <mat-icon matListIcon>home</mat-icon>
+        Home
+    </a>
+    <a mat-list-item routerLink="/asset">
+        <mat-icon matListIcon>headset</mat-icon>
         Asset
     </a>
     <!-- <a mat-list-item role="listitem" (click)="onSelect(asset)" *ngFor="let asset of assestData">
@@ -8,11 +12,8 @@
         {{asset.title | titlecase}}
     </a> -->
     <a mat-list-item routerLink="/asset/create">
-        <mat-icon matListIcon>home</mat-icon>
+        <mat-icon matListIcon>add</mat-icon>
         Create
     </a>
-    <a mat-list-item routerLink="/asset/update">
-        <mat-icon matListIcon>home</mat-icon>
-        Update
-    </a>
 </mat-nav-list>
+  

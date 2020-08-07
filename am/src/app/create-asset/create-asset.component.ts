@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AssetService } from '../asset.service';
+import { AssetService, Asset } from '../asset.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-asset',
@@ -8,21 +9,17 @@ import { AssetService } from '../asset.service';
 })
 export class CreateAssetComponent implements OnInit {
 
-  
-
-  constructor(private assetService : AssetService) { }
+  constructor(private assetService : AssetService, private route: Router) { }
 
   ngOnInit() {
   }
 
   onSubmit(create) {
-    var ele = {
-      id : create.id,
-      title : create.title,
-      number : create.unit,
-      desc : create.desc,
-      img : "#"
-    };
+    var ele = create;
+    ele.id = this.assetService.getAssets().length + 1;
+    ele.img = "#";
+    ele.number = create.unit;
     this.assetService.setData(ele);
+    this.route.navigateByUrl('/asset');
   }
 }

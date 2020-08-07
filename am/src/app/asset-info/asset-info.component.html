@@ -2,19 +2,19 @@
     <div class="col">
         <mat-list role="list">
             <mat-list-item role="listitem">
-                <mat-icon matListIcon>{{ass.title}}</mat-icon>
-                <p>{{ass.title | titlecase}}
+                <mat-icon matListIcon>{{assetInfo.title}}</mat-icon>
+                <p>{{assetInfo.title | titlecase}}
                 <p>
             </mat-list-item>
-            <mat-list-item role="listitem">Available stock : {{ass.number}}</mat-list-item>
+            <mat-list-item role="listitem">Available stock : {{assetInfo.number}}</mat-list-item>
             
-            <mat-list-item role="listitem">Details : {{ass.desc}}</mat-list-item>
+            <mat-list-item role="listitem">Details : {{assetInfo.desc}}</mat-list-item>
             <button mat-raised-button [routerLink]="'/asset'">Go Back</button>
             <br><br>
             <button mat-raised-button (click)="updateAsset()">Update</button>  
         </mat-list>
     </div>
     <div class="col">
-        <img [src]="ass.img" alt="Photo of a Shiba Inu">
+        <img [src]="assetInfo.img" alt="Photo of a Shiba Inu">
     </div>
 </div>

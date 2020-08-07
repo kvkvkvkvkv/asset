@@ -10,10 +10,9 @@ import { AssetService, Asset } from '../asset.service';
 })
 export class AssetInfoComponent implements OnInit {
   
-  assetInfo : any;
   id : number;
   assestData :Asset[];
-  ass : Asset;
+  assetInfo : Asset;
 
   constructor(private location: Location, private router: ActivatedRoute, private assetService: AssetService, private routing: Router) { }
 
@@ -21,7 +20,7 @@ export class AssetInfoComponent implements OnInit {
     let id = parseInt(this.router.snapshot.paramMap.get('id'));
     this.id = id;
     this.assestData = this.assetService.getAssets();
-    this.ass = this.getData();
+    this.assetInfo = this.getData();
   }
 
   getData() {
